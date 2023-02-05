@@ -12,7 +12,6 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				poppins: ["var(--font-poppins)"],
-				roboto: ["var(--font-roboto)"],
 			},
 		},
 	},
