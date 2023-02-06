@@ -21,14 +21,19 @@ export default function RootLayout({
 			<head />
 
 			<body className={`${poppins.className}`}>
-				<nav className="flex space-x-2 p-4">
-					<h1>Logo</h1>
-					<ul className="font-poppins flex space-x-2">
+				<nav className="flex space-x-2 pl-8 pt-5 pr-28 place-content-between max-w-full items-center">
+					<h1 className="text-4xl font-bold text-orange-600 dark:text-gray-100 font-roboto pb-4 pt-0 mt-0">
+						<span className="text-zinc-900">graph</span>Crypt
+					</h1>
+					<ul className="font-poppins flex space-x-4">
 						<li>
-							<a href="/">Home</a>
+							<a href="/">Graphs</a>
 						</li>
 						<li>
-							<a href="/about">about</a>
+							<a href="/about">Sign Up</a>
+						</li>
+						<li>
+							<a href="/about">Log In</a>
 						</li>
 					</ul>
 				</nav>
