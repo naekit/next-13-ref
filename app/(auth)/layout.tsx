@@ -1,5 +1,7 @@
 import "../globals.css"
 import { Poppins } from "@next/font/google"
+import Link from "next/link"
+import { FaArrowLeft } from "react-icons/fa"
 
 const poppins = Poppins({
 	weight: ["400", "700"],

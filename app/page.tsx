@@ -9,7 +9,6 @@ export default async function Home() {
 					Your Graph Crypt
 				</h1>
 			</div>
-			<div className={styles.items}>Welcome to the matrix</div>
 		</main>
 	)
 }

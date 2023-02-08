@@ -6,24 +6,25 @@ import { useState } from "react"
 const Login = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+	const [name, setName] = useState("")
 
-	const submitHandler = (e) => {
+	const submitHandler = (e: any) => {
 		e.preventDefault()
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center h-screen pb-20">
-			<Link
-				href="/"
-				className="text-4xl font-bold text-orange-600 dark:text-gray-100 font-roboto pb-4 pt-0 mt-0"
-			>
-				<span className="text-zinc-900">graph</span>Crypt
-			</Link>
-			<h1 className="text-4xl font-bold">Login</h1>
+		<div className="flex flex-col items-center justify-center h-screen pb-72">
 			<form
 				className="flex flex-col items-center justify-center"
 				onSubmit={submitHandler}
 			>
+				<h1 className="text-4xl font-bold mb-4">Login</h1>
+				<input
+					type="text"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				/>
 				<input
 					type="email"
 					value={email}

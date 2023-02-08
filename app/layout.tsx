@@ -1,5 +1,6 @@
 import "./globals.css"
 import { Poppins } from "@next/font/google"
+import Link from "next/link"
 
 const poppins = Poppins({
 	weight: ["400", "700"],
@@ -27,16 +28,16 @@ export default function RootLayout({
 					</h1>
 					<ul className="font-poppins flex space-x-4">
 						<li>
-							<a href="/">Home</a>
+							<Link href="/">Home</Link>
 						</li>
 						<li>
-							<a href="/graphs">Graphs</a>
+							<Link href="/graphs">Graphs</Link>
 						</li>
 						<li>
-							<a href="/login">Log In</a>
+							<Link href="/login">Log In</Link>
 						</li>
 						<li>
-							<a href="/about">Sign Up</a>
+							<Link href="/register">Register</Link>
 						</li>
 					</ul>
 				</nav>
