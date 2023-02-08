@@ -12,7 +12,8 @@ const Login = () => {
 		e.preventDefault()
 		try {
 			const data = await signIn("credentials", {
-				redirect: false,
+				callbackUrl: "/", // redirect to home page
+				redirect: true,
 				email,
 				password,
 			})
