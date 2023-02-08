@@ -33,13 +33,13 @@ const Login = () => {
 				/>
 				<button
 					type="submit"
-					className="mt-4 py-4 px-10 w-full bg-orange-500 text-gray-900 font-bold rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-10 w-full bg-orange-500 text-gray-900 font-bold rounded-md shadow-sm hover:bg-orange-300 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				>
 					Login
 				</button>
 				<Link
 					href="/register"
-					className="mt-4 py-4 px-10 w-full text-center bg-orange-600 text-gray-900 font-bold rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-10 w-full text-center bg-gray-900 text-orange-500 font-bold rounded-md shadow-sm hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				>
 					Register
 				</Link>
