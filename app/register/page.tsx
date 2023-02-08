@@ -8,8 +8,23 @@ const Login = () => {
 	const [password, setPassword] = useState("")
 	const [name, setName] = useState("")
 
-	const submitHandler = (e: any) => {
+	const submitHandler = async (e: any) => {
 		e.preventDefault()
+		try {
+			const res = await fetch(`http://localhost:3000/api/register`, {
+				method: "POST",
+				body: JSON.stringify({
+					name,
+					email,
+					password,
+				}),
+			})
+			if (!res.ok) console.log(res)
+			const data = await res.json()
+			console.log(data)
+		} catch (error) {
+			console.log(error)
+		}
 	}
 
 	return (

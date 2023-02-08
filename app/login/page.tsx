@@ -2,14 +2,25 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa"
+import { signIn } from "next-auth/react"
 
 const Login = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 
-	const submitHandler = (e: any) => {
+	const submitHandler = async (e: any) => {
 		e.preventDefault()
+		try {
+			const data = await signIn("credentials", {
+				redirect: false,
+				email,
+				password,
+			})
+
+			console.log(data)
+		} catch (error) {
+			console.log(error)
+		}
 	}
 
 	return (
