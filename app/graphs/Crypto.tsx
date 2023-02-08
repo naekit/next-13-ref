@@ -1,9 +1,8 @@
 // nextjs client component to render each crypto currency
 // Path: app/Crypto.tsx
-import Link from "next/link"
 import styles from "./crypto.module.css"
 
-export default function Crypto({ item }) {
+export default function Crypto({ item }: any) {
 	return (
 		<div className={styles.item} key={item.id}>
 			<h1>{item.name}</h1>

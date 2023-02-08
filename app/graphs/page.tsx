@@ -1,5 +1,6 @@
 import Crypto from "./Crypto"
 import styles from "../page.module.css"
+import Link from "next/link"
 
 export default async function Home() {
 	const res = await fetch(
@@ -21,8 +22,10 @@ export default async function Home() {
 				</h1>
 			</div>
 			<div className={styles.items}>
-				{data.data.map((item) => (
-					<Crypto key={item.id} item={item} />
+				{data.data.map((item: any) => (
+					<Link href={`/graphs/${item.slug}`}>
+						<Crypto key={item.id} item={item} />
+					</Link>
 				))}
 			</div>
 		</main>
