@@ -33,7 +33,7 @@ export default function RootLayout({
 							<a href="/graphs">Graphs</a>
 						</li>
 						<li>
-							<a href="/about">Log In</a>
+							<a href="/login">Log In</a>
 						</li>
 						<li>
 							<a href="/about">Sign Up</a>
