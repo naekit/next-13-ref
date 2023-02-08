@@ -10,9 +10,9 @@ export default async function Home() {
 			},
 		}
 	)
+
 	const data = await res.json()
 
-	console.log(data.data)
 	return (
 		<main className={styles.main}>
 			<div className={styles.description}>
