@@ -12,8 +12,8 @@ export default function NavLink({ label, path, targetSegment }: any) {
 			href={path}
 			className={`${
 				isActive
-					? "text-orange-600 border-b-2 border-orange-600 font-bold"
-					: "text-zinc-900 font-bold"
+					? "text-zinc-50 font-bold bg-orange-400 p-2 rounded-tr-sm rounded-tl-sm"
+					: "text-zinc-900 font-bold p-2"
 			}`}
 		>
 			{label}

@@ -15,7 +15,7 @@ const Header = () => {
 					<span className="text-zinc-900">graph</span>Crypt
 				</h1>
 			</Link>
-			<ul className="font-poppins flex space-x-4">
+			<ul className="font-poppins flex space-x-4 border-b-8 border-spacing-0 border-orange-400">
 				<li>
 					<NavLink path="/" targetSegment={null} label="Home" />
 				</li>

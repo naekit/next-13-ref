@@ -55,7 +55,15 @@ const Graph = ({ paramObj }: any) => {
 
 			setData({
 				labels: res.prices.map((price: number[]) => {
-					return moment.unix(price[0] / 1000).format("YY MMM Do")
+					return moment
+						.unix(price[0] / 1000)
+						.format(
+							days <= 1
+								? "HH"
+								: days >= 360
+								? "YY MMM Do"
+								: "MMM Do"
+						)
 				}),
 				datasets: [
 					{
@@ -80,7 +88,7 @@ const Graph = ({ paramObj }: any) => {
 	return (
 		<div>
 			<div className="pl-10">
-				<h1 className="text-4xl font-bold text-orange-600">
+				<h1 className="text-4xl font-bold text-orange-600 ">
 					{paramObj.graphId}
 				</h1>
 				<select
@@ -108,7 +116,7 @@ const Graph = ({ paramObj }: any) => {
 					<option value={60}>60 days</option>
 					<option value={30}>30 days</option>
 					<option value={7}>7 days</option>
-					<option value={1}>1 days</option>
+					<option value={1}>1 day</option>
 				</select>
 			</div>
 			{!data ? (
