@@ -12,7 +12,7 @@ const Register = () => {
 		e.preventDefault()
 		try {
 			const res = await fetch(
-				`https://next-13-ref-4add.vercel.app/register`,
+				`https://next-13-ref-4add.vercel.app/api/register`,
 				{
 					method: "POST",
 					body: JSON.stringify({
