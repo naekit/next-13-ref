@@ -6,6 +6,7 @@ import NavLink from "./NavLink"
 const Header = () => {
 	const session = useSession()
 	const isAuth = session.status === "authenticated"
+	console.log(session.data)
 
 	return (
 		<nav className="flex space-x-2 pl-8 pt-10 pr-28 justify-between max-w-full items-center">
@@ -36,7 +37,7 @@ const Header = () => {
 						</li>
 						<li>
 							<span
-								className="cursor-pointer"
+								className="cursor-pointer rounded-sm text-zinc-800 font-bold border-zinc-900 border-2 p-2 border-l-0 hover:bg-zinc-50"
 								onClick={() => signOut()}
 							>
 								Log Out

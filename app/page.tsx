@@ -12,8 +12,12 @@ async function getPosts() {
 }
 
 export default async function Home() {
-	const data: { id: number; title: string; content: string }[] =
-		await getPosts()
+	const data: {
+		id: number
+		sentiment: string
+		content: string
+		currency: string
+	}[] = await getPosts()
 	console.log(data)
 
 	return (
@@ -71,7 +75,8 @@ export default async function Home() {
 			)}
 			{data.map((post) => (
 				<div key={post.id} className="border-2 border-black w-full p-4">
-					<h2>{post.title}</h2>
+					<h2>{post.currency}</h2>
+					<p>{post.sentiment}</p>
 					<p>{post.content}</p>
 				</div>
 			))}
