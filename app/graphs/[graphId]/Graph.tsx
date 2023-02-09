@@ -27,7 +27,7 @@ import { FaPlus, FaBell, FaEnvelopeOpenText } from "react-icons/fa"
 
 // show specific crypto chart when rendered
 const Graph = ({ paramObj }: any) => {
-	const [days, setDays] = useState(30)
+	const [days, setDays] = useState<any>(30)
 	const [data, setData] = useState<ChartData<"line">>()
 	const [options, setOptions] = useState<ChartOptions<"line">>({
 		responsive: true,
@@ -47,7 +47,7 @@ const Graph = ({ paramObj }: any) => {
 				`https://api.coingecko.com/api/v3/coins/${
 					paramObj.graphId
 				}/market_chart?vs_currency=usd&days=${days}&interval=${
-					days > 7 ? "daily" : "hourly"
+					days > 7 || days === "max" ? "daily" : "hourly"
 				}`
 			)
 
