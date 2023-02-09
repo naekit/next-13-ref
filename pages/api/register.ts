@@ -25,7 +25,6 @@ export default async function handler(
 				data: {
 					name: data.name,
 					email: data.email,
-					// @ts-ignore
 					password: data.password,
 				},
 			})

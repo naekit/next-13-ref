@@ -2,23 +2,24 @@ import Image from "next/image"
 import graphImg from "../public/graph.png"
 import { FaPlus, FaBell, FaEnvelopeOpenText } from "react-icons/fa"
 
-async function getPosts() {
-	const res = await fetch(`${process.env.BASE_URL}/api/getPosts`)
-	if (!res.ok) {
-		throw new Error("Failed to fetch")
-	}
+// async function getPosts() {
+// 	const res = await fetch(`${process.env.BASE_URL}/api/getPosts`)
+// 	if (!res.ok) {
+// 		throw new Error("Failed to fetch")
+// 	}
 
-	return res.json()
-}
+// 	return res.json()
+// }
 
 export default async function Home() {
-	const data: {
-		id: number
-		sentiment: string
-		content: string
-		currency: string
-	}[] = await getPosts()
-	console.log(data)
+	// const data: {
+	// 	id: number
+	// 	sentiment: string
+	// 	content: string
+	// 	currency: string
+	// }[] = await getPosts()
+
+	// console.log(data)
 
 	return (
 		<main>
@@ -66,20 +67,6 @@ export default async function Home() {
 					</ul>
 				</div>
 			</div>
-			{data && data.length > 0 && (
-				<div className="mt-20">
-					<h1 className="text-4xl font-bold text-orange-600">
-						Posts
-					</h1>
-				</div>
-			)}
-			{data.map((post) => (
-				<div key={post.id} className="border-2 border-black w-full p-4">
-					<h2>{post.currency}</h2>
-					<p>{post.sentiment}</p>
-					<p>{post.content}</p>
-				</div>
-			))}
 		</main>
 	)
 }
