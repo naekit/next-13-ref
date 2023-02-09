@@ -28,7 +28,7 @@ const Register = () => {
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center h-screen pb-72">
+		<div className="flex flex-col items-center justify-center mt-32">
 			<form
 				className="flex flex-col items-center justify-center"
 				onSubmit={submitHandler}
@@ -38,19 +38,19 @@ const Register = () => {
 					type="text"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
-					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-3 w-96 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<input
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-3 w-96 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<input
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
-					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-3 w-96 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<button
 					type="submit"
@@ -60,9 +60,9 @@ const Register = () => {
 				</button>
 				<Link
 					href="/login"
-					className="mt-4 py-4 px-10 w-full text-center bg-gray-900 text-orange-500 font-bold rounded-md shadow-sm hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="text-blue-500 hover:text-blue-700 mt-4"
 				>
-					Login
+					<span className="text-zinc-800">Coming back?</span> Login
 				</Link>
 			</form>
 		</div>
