@@ -1,13 +1,15 @@
 import { signOut, useSession } from "next-auth/react"
 import Link from "next/link"
+import NavLink from "./NavLink"
 
 // header
-const Header = () => {
+const Header = ({ params }: any) => {
+	console.log(params)
 	const session = useSession()
 	const isAuth = session.status === "authenticated"
 
 	return (
-		<nav className="flex space-x-2 pl-8 pt-10 pr-28 place-content-between max-w-full items-center">
+		<nav className="flex space-x-2 pl-8 pt-10 pr-28 justify-between max-w-full items-center">
 			<Link href="/">
 				<h1 className="text-4xl font-extrabold text-orange-600 pb-4 pt-0 mt-0">
 					<span className="text-zinc-900">graph</span>Crypt
@@ -15,15 +17,23 @@ const Header = () => {
 			</Link>
 			<ul className="font-poppins flex space-x-4">
 				<li>
-					<Link href="/">Home</Link>
+					<NavLink path="/" targetSegment={null} label="Home" />
 				</li>
 				<li>
-					<Link href="/graphs">Graphs</Link>
+					<NavLink
+						path="/graphs"
+						targetSegment="graphs"
+						label="Graphs"
+					/>
 				</li>
 				{isAuth ? (
 					<>
 						<li>
-							<Link href="/dashboard">Dashboard</Link>
+							<NavLink
+								path="/dashboard"
+								targetSegment="dashboard"
+								label="Dashboard"
+							/>
 						</li>
 						<li>
 							<span
@@ -37,10 +47,18 @@ const Header = () => {
 				) : (
 					<>
 						<li>
-							<Link href="/login">Log In</Link>
+							<NavLink
+								path="/login"
+								targetSegment="login"
+								label="Log In"
+							/>
 						</li>
 						<li>
-							<Link href="/register">Register</Link>
+							<NavLink
+								path="/register"
+								targetSegment="register"
+								label="Register"
+							/>
 						</li>
 					</>
 				)}

@@ -19,6 +19,14 @@ export default async function Home() {
 	return (
 		<main>
 			<div className="max-w-full grid grid-cols-2 items-center mt-32 mr-10">
+				<div>
+					<Image
+						src={graphImg}
+						alt="graph"
+						width={800}
+						className="p-20 w-full"
+					/>
+				</div>
 				<div className="text-center">
 					<h1 className="text-6xl pb-2 ml-10 leading-tight">
 						Need your crypto with{" "}
@@ -51,14 +59,6 @@ export default async function Home() {
 							</p>
 						</li>
 					</ul>
-				</div>
-				<div>
-					<Image
-						src={graphImg}
-						alt="graph"
-						width={800}
-						className="p-20 w-fit"
-					/>
 				</div>
 			</div>
 			{data && data.length > 0 && (

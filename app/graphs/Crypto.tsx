@@ -14,7 +14,7 @@ export default function Crypto({ item }: any) {
 		)
 
 	return (
-		<div className="p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:scale-105 hover:shadow-lg transition-all ease-linear duration-300">
+		<div className="p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:scale-105 hover:shadow-lg transition-all ease-linear duration-300">
 			<h1 className="py-1">{item.name}</h1>
 			<h1 className="py-1">{item.symbol}</h1>
 			<div className="flex items-center gap-2">
@@ -26,4 +26,4 @@ export default function Crypto({ item }: any) {
 			</div>
 		</div>
 	)
-} // end of Crypto component
+}
