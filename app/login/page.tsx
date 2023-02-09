@@ -25,7 +25,7 @@ const Login = () => {
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center h-screen pb-72">
+		<div className="flex flex-col items-center justify-center h-screen pb-72 w-full">
 			<form
 				className="flex flex-col items-center justify-center"
 				onSubmit={submitHandler}
@@ -35,23 +35,23 @@ const Login = () => {
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<input
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
-					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<button
 					type="submit"
-					className="mt-4 py-4 px-10 w-full bg-orange-500 text-gray-900 font-bold rounded-md shadow-sm hover:bg-orange-300 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-14 w-full bg-orange-500 text-gray-900 font-bold rounded-md shadow-sm hover:bg-orange-300 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				>
 					Login
 				</button>
 				<Link
 					href="/register"
-					className="mt-4 py-4 px-10 w-full text-center bg-gray-900 text-orange-500 font-bold rounded-md shadow-sm hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-14 w-full text-center bg-gray-900 text-orange-500 font-bold rounded-md shadow-sm hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				>
 					Register
 				</Link>

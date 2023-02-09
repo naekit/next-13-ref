@@ -38,19 +38,19 @@ const Register = () => {
 					type="text"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
-					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<input
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<input
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
-					className="mt-4 py-4 px-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					className="mt-4 py-4 px-20 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 				/>
 				<button
 					type="submit"

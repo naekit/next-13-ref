@@ -4,12 +4,7 @@ import Link from "next/link"
 
 export default async function Home() {
 	const res = await fetch(
-		"https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
-		{
-			headers: {
-				"X-CMC_PRO_API_KEY": `${process.env.API_KEY}`,
-			},
-		}
+		"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 	)
 
 	const data = await res.json()
@@ -22,11 +17,13 @@ export default async function Home() {
 				</h1>
 			</div>
 			<div className={styles.items}>
-				{data.data.map((item: any) => (
-					<Link href={`/graphs/${item.slug}`}>
-						<Crypto key={item.id} item={item} />
-					</Link>
-				))}
+				{data
+					? data.map((item: any) => (
+							<Link key={item.id} href={`/graphs/${item.id}`}>
+								<Crypto item={item} />
+							</Link>
+					  ))
+					: null}
 			</div>
 		</main>
 	)
