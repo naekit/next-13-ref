@@ -25,6 +25,7 @@ export default async function Home() {
 						alt="graph"
 						width={800}
 						className="p-20 w-full"
+						priority
 					/>
 				</div>
 				<div className="text-center">

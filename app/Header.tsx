@@ -3,8 +3,7 @@ import Link from "next/link"
 import NavLink from "./NavLink"
 
 // header
-const Header = ({ params }: any) => {
-	console.log(params)
+const Header = () => {
 	const session = useSession()
 	const isAuth = session.status === "authenticated"
 

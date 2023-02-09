@@ -25,7 +25,7 @@ export default function RootLayout({
       */}
 			<head />
 
-			<body className={`${poppins.className}`}>
+			<body className={`${poppins.className} bg-slate-100`}>
 				<SessionProvider>
 					<Header />
 					{children}

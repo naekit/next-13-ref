@@ -50,11 +50,12 @@ const Graph = ({ paramObj }: any) => {
 					days > 7 ? "daily" : "hourly"
 				}`
 			)
+
 			const res = await data.json()
-			console.log(res)
+
 			setData({
 				labels: res.prices.map((price: number[]) => {
-					return moment.unix(price[0] / 1000).format("MMM Do")
+					return moment.unix(price[0] / 1000).format("YY MMM Do")
 				}),
 				datasets: [
 					{
@@ -98,14 +99,14 @@ const Graph = ({ paramObj }: any) => {
       							ease-in-out
       							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 					onChange={handleSelect}
+					defaultValue={30}
 				>
+					<option value="max">max</option>
 					<option value={360}>360 days</option>
 					<option value={180}>180 days</option>
 					<option value={90}>90 days</option>
 					<option value={60}>60 days</option>
-					<option selected value={30}>
-						30 days
-					</option>
+					<option value={30}>30 days</option>
 					<option value={7}>7 days</option>
 					<option value={1}>1 days</option>
 				</select>

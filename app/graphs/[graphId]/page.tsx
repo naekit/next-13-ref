@@ -4,7 +4,7 @@ import Graph from "./Graph"
 const Page = async ({ params }: any) => {
 	console.log(params)
 	return (
-		<div className="h-screen min-w-full">
+		<div>
 			<Graph paramObj={params} />
 		</div>
 	)
