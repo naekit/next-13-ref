@@ -11,14 +11,17 @@ const Register = () => {
 	const submitHandler = async (e: any) => {
 		e.preventDefault()
 		try {
-			const res = await fetch(`http://localhost:3000/api/register`, {
-				method: "POST",
-				body: JSON.stringify({
-					name,
-					email,
-					password,
-				}),
-			})
+			const res = await fetch(
+				`https://next-13-ref-4add.vercel.app/register`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						name,
+						email,
+						password,
+					}),
+				}
+			)
 			if (!res.ok) console.log(res)
 			const data = await res.json()
 			console.log(data)
