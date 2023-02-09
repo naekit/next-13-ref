@@ -1,6 +1,5 @@
 // nextjs client component to render each crypto currency
 // Path: app/Crypto.tsx
-import styles from "./crypto.module.css"
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa"
 
 export default function Crypto({ item }: any) {
