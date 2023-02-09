@@ -37,7 +37,7 @@ const Header = () => {
 						</li>
 						<li>
 							<span
-								className="cursor-pointer rounded-sm text-zinc-800 font-bold border-zinc-900 border-2 p-2 border-l-0 hover:bg-zinc-50"
+								className="cursor-pointer rounded-sm text-zinc-800 font-bold border-zinc-900 border-4 border-b-0 bg-blue-50 p-2 hover:bg-zinc-50"
 								onClick={() => signOut()}
 							>
 								Log Out
