@@ -15,7 +15,7 @@ const Header = () => {
 					<span className="text-zinc-900 underline">graph</span>Crypt
 				</h1>
 			</Link>
-			<ul className="font-poppins flex space-x-4 border-b-8 border-spacing-0 border-orange-400">
+			<ul className="font-poppins flex space-x-4 border-b-8 border-spacing-0 border-orange-400 hover:border-b-4 transition-all duration-400 ease-linear">
 				<li>
 					<NavLink path="/" targetSegment={null} label="Home" />
 				</li>
@@ -37,7 +37,7 @@ const Header = () => {
 						</li>
 						<li>
 							<span
-								className="cursor-pointer rounded-sm text-zinc-800 font-bold border-orange-400 border-4 border-b-0  bg-blue-50 p-2 hover:bg-zinc-50"
+								className="cursor-pointer rounded-sm text-zinc-800 font-bold border-orange-400 border-r-8 p-1 hover:text-orange-600 hover:border-r-4 transition-all duration-400 ease-linear"
 								onClick={() => signOut()}
 							>
 								Log Out
