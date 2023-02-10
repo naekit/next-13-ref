@@ -12,7 +12,7 @@ export default function NavLink({ label, path, targetSegment }: any) {
 			href={path}
 			className={`${
 				isActive
-					? "text-zinc-50 hover:text-zinc-900 font-bold bg-orange-400 p-1 rounded-tr-sm rounded-tl-sm"
+					? "text-zinc-50 font-bold bg-orange-400 p-1 rounded-tr-sm rounded-tl-sm"
 					: "text-zinc-900 font-bold p-2 hover:text-orange-600"
 			} tracking-widest`}
 		>
